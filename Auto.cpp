@@ -25,7 +25,10 @@ void Auto::ispisiPodakte()
 int main()
 {
     Auto mojAuto;
+
     mojAuto.ispisiPodakte();
+    cout << endl;
     cout << "Auto je staro :" << mojAuto.Starost(2020) << endl;
+
     return 0;
 }

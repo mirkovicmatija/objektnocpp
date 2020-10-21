@@ -13,5 +13,6 @@ int main()
     Album Istina;
     std::cout << Istina.godina << std::endl;
     std::cout << Istina.Izvodjac << std::endl;
+    std::cout << Istina.prva_pjesma << std::endl;
     return 0;
 }

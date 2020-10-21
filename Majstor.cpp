@@ -20,9 +20,9 @@ public:
     void setIme(string a) { ime = a; }
     string getBroj() { return mobilniBroj; }
 
-    void Popravi() { cout << "Popravljam Stolicu" << endl; }
-    void Napravi() { cout << "Pravim Regale" << cijenaServisa << endl; }
-    void Profil()
+    virtual void Popravi() { cout << "Popravljam Stolicu" << endl; }
+    virtual void Napravi() { cout << "Pravim Regale" << cijenaServisa << endl; }
+    virtual void Profil()
     {
         cout << "ime : " << ime << endl;
         cout << "Cijena Servisa : " << cijenaServisa << endl;
@@ -58,15 +58,20 @@ public:
 int main()
 {
     Majstor Majstor("100KM", "Mica", "065123456");
-    Elektricar Elektricar("100KM", "Rade", "065789123", true);
+    Elektricar Elektricar("200KM", "Rade", "065789123", true);
     Elektricar.Profil();
     cout << endl;
     Elektricar.setIme("Mare");
     Majstor.Profil();
     cout << endl;
+    Elektricar.Profil();
+    cout << endl;
+    Majstor.setIme("Goci");
+    cout << endl;
+    cout << endl;
     Majstor.Popravi();
     cout << endl;
-    Elektricar.Napravi();
+    Elektricar.Popravi();
     cout << endl;
     Elektricar.Zalemi();
     return 0;

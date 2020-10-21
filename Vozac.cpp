@@ -67,11 +67,13 @@ int main()
     Vozac Cetiri("McLaren", "Lando Norris", 0, 2);
     Vozac Sedam;
     Ham.Profil();
+    cout << endl;
     cout << "Broj pobjeda LH : " << Ham.getPobjede() << endl;
     Sedam.setTim("Alfa Romeo");
     cout << endl;
     Sedam.Profil();
     Cetiri.setTim("");
+    cout << endl;
     Cetiri.Profil();
     cout << endl;
     cout << "Vozac 4 vozi " << Cetiri.NovaSezona() << "  sezone\n";

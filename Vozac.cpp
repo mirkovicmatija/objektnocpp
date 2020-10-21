@@ -63,16 +63,19 @@ void Vozac::Profil()
 
 int main()
 {
-    Vozac Ham("Mercedes", 14, 91);
-    Vozac Cetiri("McLaren", "Lando Norris", 2, 0);
+    Vozac Ham("Mercedes", 91, 14);
+    Vozac Cetiri("McLaren", "Lando Norris", 0, 2);
     Vozac Sedam;
     Ham.Profil();
     cout << "Broj pobjeda LH : " << Ham.getPobjede() << endl;
     Sedam.setTim("Alfa Romeo");
+    cout << endl;
     Sedam.Profil();
     Cetiri.setTim("");
     Cetiri.Profil();
-    Cetiri.NovaSezona();
+    cout << endl;
+    cout << "Vozac 4 vozi " << Cetiri.NovaSezona() << "  sezone\n";
+    cout << endl;
     Cetiri.Profil();
     return 0;
 }

@@ -19,12 +19,13 @@ void Auto::ispisiPodakte()
     cout << "marka : " << marka << endl;
     cout << "model : " << model << endl;
     cout << "Godiste : " << godiste << endl;
-    cout << "motor" << motor << endl;
+    cout << "motor : " << motor << endl;
 }
 
 int main()
 {
     Auto mojAuto;
     mojAuto.ispisiPodakte();
+    cout << "Auto je staro :" << mojAuto.Starost(2020) << endl;
     return 0;
 }

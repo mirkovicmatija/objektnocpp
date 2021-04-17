@@ -6,8 +6,8 @@ class Vozac
 private:
     string tim;
     string ime;
-    int pobjede;
-    int broj_sezona;
+    int pobjede = 0;
+    int broj_sezona = 0;
 
 public:
     Vozac() {}
@@ -63,9 +63,9 @@ void Vozac::Profil()
 
 int main()
 {
-    Vozac Ham("Mercedes", 91, 14);
-    Vozac Cetiri("McLaren", "Lando Norris", 0, 2);
-    Vozac Sedam;
+    Vozac Ham("Mercedes", 91, 14);                 //2
+    Vozac Cetiri("McLaren", "Lando Norris", 0, 2); //3
+    Vozac Sedam;                                   //1
     Ham.Profil();
     cout << endl;
     cout << "Broj pobjeda LH : " << Ham.getPobjede() << endl;

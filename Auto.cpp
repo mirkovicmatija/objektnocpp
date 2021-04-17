@@ -4,13 +4,14 @@ using namespace std;
 class Auto
 {
 private:
-    string marka = "BMW";
-    string model = "M3";
     int godiste = 2012;
     float motor = 2.0;
+    string marka = "BMW";
+    string model = "M3";
 
 public:
     void ispisiPodakte();
+
     int Starost(int tren_god) { return tren_god - godiste; }
 };
 
@@ -27,7 +28,6 @@ int main()
     Auto mojAuto;
 
     mojAuto.ispisiPodakte();
-    cout << endl;
     cout << "Auto je staro :" << mojAuto.Starost(2020) << endl;
 
     return 0;

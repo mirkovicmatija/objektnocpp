@@ -4,12 +4,12 @@ using namespace std;
 class Majstor
 {
 protected:
-    string cijenaServisa;
+    int cijenaServisa;
     string ime;
     string mobilniBroj;
 
 public:
-    Majstor(string a, string b, string c)
+    Majstor(int a, string b, string c)
     {
         cijenaServisa = a;
         ime = b;
@@ -19,9 +19,21 @@ public:
 
     void setIme(string a) { ime = a; }
     string getBroj() { return mobilniBroj; }
+    string getIme() { return ime; }
 
     virtual void Popravi() { cout << "Popravljam Stolicu" << endl; }
     virtual void Napravi() { cout << "Pravim Regale" << cijenaServisa << endl; }
+    void Preskup(int budzet)
+    {
+        if (budzet >= cijenaServisa)
+        {
+            cout << "Imate dovoljno novca za servis" << endl;
+        }
+        else
+        {
+            cout << "Nemate dovoljno novca za servis" << endl;
+        }
+    }
     virtual void Profil()
     {
         cout << "ime : " << ime << endl;
@@ -32,11 +44,11 @@ public:
 
 class Elektricar : public Majstor
 {
-
+private:
     bool radSaVisokimNaponom;
 
 public:
-    Elektricar(string a, string b, string c, bool d) : Majstor(a, b, c)
+    Elektricar(int a, string b, string c, bool d) : Majstor(a, b, c)
     {
         radSaVisokimNaponom = d;
     };
@@ -57,22 +69,21 @@ public:
 
 int main()
 {
-    Majstor Majstor("100KM", "Mica", "065123456");
-    Elektricar Elektricar("200KM", "Rade", "065789123", true);
-    Elektricar.Profil();
-    cout << endl;
-    Elektricar.setIme("Mare");
-    Majstor.Profil();
-    cout << endl;
-    Elektricar.Profil();
-    cout << endl;
-    Majstor.setIme("Goci");
-    cout << endl;
-    cout << endl;
-    Majstor.Popravi();
-    cout << endl;
-    Elektricar.Popravi();
-    cout << endl;
-    Elektricar.Zalemi();
-    return 0;
+    Majstor Majstor(100, "Mica", "065123456");
+    Elektricar Elektricar(200, "Rade", "065789123", true);
+    int izbor;
+    do
+    {
+        switch (izbor)
+        {
+        case 1:
+            Elektricar.Profil();
+            break;
+        case 2:
+            Majstor.Profil();
+            break;
+        default:
+            break;
+        }
+    } while (izbor < 4);
 }
